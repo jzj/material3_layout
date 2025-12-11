@@ -178,7 +178,7 @@ void main() {
           type: type,
         );
 
-        final retrievedDestination = settings.destinations.first;
+        final retrievedDestination = settings.destinations.first as NavigationDrawerDestination;
         expect(retrievedDestination.icon, isA<Icon>());
         expect(retrievedDestination.label, isA<Text>());
         expect(retrievedDestination.selectedIcon, isA<Icon>());
@@ -200,7 +200,7 @@ void main() {
           type: type,
         );
 
-        final retrievedDestination = settings.destinations.first;
+        final retrievedDestination = settings.destinations.first as NavigationDrawerDestination;
         expect(retrievedDestination.icon, isA<Icon>());
         expect(retrievedDestination.label, isA<Text>());
         expect(retrievedDestination.selectedIcon, isNull);
@@ -287,7 +287,7 @@ void main() {
         );
 
         expect(settings.destinations.length, equals(1));
-        final destination = settings.destinations.first;
+        final destination = settings.destinations.first as NavigationDrawerDestination;
         expect(destination.icon, isA<Container>());
         expect(destination.label, isA<Row>());
         expect(destination.selectedIcon, isA<Badge>());
